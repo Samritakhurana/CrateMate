@@ -1,88 +1,157 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+  ImageBackground,
+} from 'react-native';
 
 export default function HomeScreen({ navigation }) {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>CrateMate</Text>
-      <Text style={styles.subtitle}>
-        Smart storage assistant for papaya farmers. Track harvests, prevent spoilage,
-        and manage inventory — all in one simple app.
-      </Text>
+    <ImageBackground
+      source={require('../assets/cratemate-bg.png')}
+      style={styles.background}
+      resizeMode="cover"
+    >
+      <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.overlay}>
+          <Text style={styles.title}>CrateMate</Text>
+          <Text style={styles.tagline}>
+            Helping Small Farmers Keep Their Papayas Fresh
+          </Text>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Add Harvest')}
-      >
-        <Text style={styles.buttonText}>➕ Add Harvest</Text>
-      </TouchableOpacity>
+          <Text style={styles.paragraph}>
+            CrateMate started with a simple goal: to help small farmers save more of the fruit they work so hard to grow. Every year, tons of papayas spoil—not because they’re bad, but because farmers don’t have the tools to track freshness or protect them after harvest. CrateMate changes that.
+          </Text>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Shelf Life')}
-      >
-        <Text style={styles.buttonText}>🍃 Check Shelf Life</Text>
-      </TouchableOpacity>
+          <Text style={styles.paragraph}>
+            It’s a mobile app made just for them. Paired with our eco-friendly bamboo crates, CrateMate uses real-life data to help farmers keep papayas fresh longer, cut down on waste, and earn more from every harvest.
+          </Text>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Inventory')}
-      >
-        <Text style={styles.buttonText}>📊 Track Inventory</Text>
-      </TouchableOpacity>
+          <Text style={styles.sectionTitle}>Here’s what CrateMate does:</Text>
 
-      <Text style={styles.footer}>
-        Built for small-scale farmers. Lightweight, offline, and easy to use.
-      </Text>
-    </ScrollView>
+          <Text style={styles.bullet}>
+            • Predicts shelf life based on the harvest date, crate type, and local weather.
+          </Text>
+          <Text style={styles.bullet}>
+            • Sends early spoilage alerts to prevent loss.
+          </Text>
+          <Text style={styles.bullet}>
+            • Gives daily storage tips based on weather (e.g. move crates to shade).
+          </Text>
+          <Text style={styles.bullet}>
+            • Tracks inventory — harvests, sales, losses, and spoilage trends.
+          </Text>
+          <Text style={styles.bullet}>
+            • Works offline and syncs data once internet is available.
+          </Text>
+          <Text style={styles.bullet}>
+            • Supports local languages with a simple, friendly design.
+          </Text>
+
+          <Text style={styles.paragraph}>
+            CrateMate is built with real farmers in mind—practical, reliable, and easy to use. It brings together good science, smart design, and a deep respect for the people who feed us.
+          </Text>
+
+          <Text style={styles.paragraph}>
+            Plus, it comes with our custom bamboo crates—sturdy, breathable, and biodegradable, with antimicrobial cushions to slow ripening naturally.
+          </Text>
+
+          <Text style={styles.paragraph}>
+            CrateMate isn’t just an app—it’s a step toward fewer spoiled papayas, stronger harvests, and more support for the hands that grow our food.
+          </Text>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Add Harvest')}
+          >
+            <Text style={styles.buttonText}>➕ Add Harvest</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Shelf Life')}
+          >
+            <Text style={styles.buttonText}>🍃 Check Shelf Life</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Inventory')}
+          >
+            <Text style={styles.buttonText}>📊 Track Inventory</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
   container: {
     flexGrow: 1,
-    justifyContent: 'center',
+    padding: 20,
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    padding: 30,
-    backgroundColor: '#f9fefb',
+  },
+  overlay: {
+    backgroundColor: 'rgba(255,255,255,0.88)',
+    padding: 20,
+    borderRadius: 16,
+    maxWidth: 800,
   },
   title: {
-    fontSize: 34,
+    fontSize: 36,
     fontWeight: 'bold',
     color: '#2e7d32',
-    marginBottom: 20,
     textAlign: 'center',
+    marginBottom: 10,
   },
-  subtitle: {
-    fontSize: 16,
-    color: '#555',
+  tagline: {
+    fontSize: 18,
+    fontWeight: '500',
+    color: '#444',
     textAlign: 'center',
-    marginBottom: 40,
+    marginBottom: 25,
+  },
+  paragraph: {
+    fontSize: 16,
+    color: '#333',
+    marginBottom: 16,
     lineHeight: 24,
+    textAlign: 'justify',
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginBottom: 12,
+    color: '#1b5e20',
+  },
+  bullet: {
+    fontSize: 15,
+    marginBottom: 8,
+    color: '#444',
+    lineHeight: 22,
   },
   button: {
     backgroundColor: '#2196F3',
     paddingVertical: 14,
     paddingHorizontal: 30,
-    borderRadius: 8,
-    marginVertical: 10,
-    width: '80%',
+    borderRadius: 10,
+    marginTop: 16,
     alignItems: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 3,
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
   },
-  footer: {
-    marginTop: 40,
-    fontSize: 12,
-    color: '#888',
-    textAlign: 'center',
-    paddingHorizontal: 10,
-  },
 });
+
