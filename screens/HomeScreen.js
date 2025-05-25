@@ -2,11 +2,13 @@ import React from 'react';
 import {
   View,
   Text,
-  TouchableOpacity,
   StyleSheet,
   ScrollView,
   ImageBackground,
+  Pressable,
+  Animated,
 } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -16,11 +18,9 @@ export default function HomeScreen({ navigation }) {
       resizeMode="cover"
     >
       <ScrollView contentContainerStyle={styles.container}>
-        <View style={styles.overlay}>
+        <View style={styles.card}>
           <Text style={styles.title}>CrateMate</Text>
-          <Text style={styles.tagline}>
-            Helping Small Farmers Keep Their Papayas Fresh
-          </Text>
+          <Text style={styles.tagline}>Helping Small Farmers Keep Their Papayas Fresh</Text>
 
           <Text style={styles.paragraph}>
             CrateMate started with a simple goal: to help small farmers save more of the fruit they work so hard to grow. Every year, tons of papayas spoil—not because they’re bad, but because farmers don’t have the tools to track freshness or protect them after harvest. CrateMate changes that.
@@ -31,22 +31,12 @@ export default function HomeScreen({ navigation }) {
           </Text>
 
           <Text style={styles.sectionTitle}>Here’s what CrateMate does:</Text>
+          <Text style={styles.bullet}>• Predicts shelf life based on the harvest date, crate type, and local weather.</Text>
+          <Text style={styles.bullet}>• Sends early spoilage alerts to prevent loss.</Text>
+          <Text style={styles.bullet}>• Gives daily storage tips based on weather (e.g. move crates to shade).</Text>
+          <Text style={styles.bullet}>• Tracks inventories like harvests, sales, losses, and spoilage trends.</Text>
+          <Text style={styles.bullet}>• Supports local languages with a simple, friendly design.</Text>
 
-          <Text style={styles.bullet}>
-            • Predicts shelf life based on the harvest date, crate type, and local weather.
-          </Text>
-          <Text style={styles.bullet}>
-            • Sends early spoilage alerts to prevent loss.
-          </Text>
-          <Text style={styles.bullet}>
-            • Gives daily storage tips based on weather (e.g. move crates to shade).
-          </Text>
-          <Text style={styles.bullet}>
-            • Tracks inventories like harvests, sales, losses, and spoilage trends.
-          </Text>
-          <Text style={styles.bullet}>
-            • Supports local languages with a simple, friendly design.
-          </Text>
           <Text style={styles.paragraph}>
             Plus, it comes with our custom bamboo crates—sturdy, breathable, and biodegradable, with antimicrobial cushions to slow ripening naturally.
           </Text>
@@ -55,26 +45,21 @@ export default function HomeScreen({ navigation }) {
             CrateMate helps farmers save fruit, cut waste, and grow with confidence.
           </Text>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate('Add Harvest')}
-          >
-            <Text style={styles.buttonText}>➕ Add Harvest</Text>
-          </TouchableOpacity>
+          {/* Animated Buttons with Icons */}
+          <Pressable style={styles.button} onPress={() => navigation.navigate('Add Harvest')}>
+            <Ionicons name="add-circle-outline" size={20} color="white" />
+            <Text style={styles.buttonText}> Add Harvest</Text>
+          </Pressable>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate('Shelf Life')}
-          >
-            <Text style={styles.buttonText}>🍃 Check Shelf Life</Text>
-          </TouchableOpacity>
+          <Pressable style={styles.button} onPress={() => navigation.navigate('Shelf Life')}>
+            <Ionicons name="leaf-outline" size={20} color="white" />
+            <Text style={styles.buttonText}> Check Shelf Life</Text>
+          </Pressable>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate('Inventory')}
-          >
-            <Text style={styles.buttonText}>📊 Track Inventory</Text>
-          </TouchableOpacity>
+          <Pressable style={styles.button} onPress={() => navigation.navigate('Inventory')}>
+            <Ionicons name="bar-chart-outline" size={20} color="white" />
+            <Text style={styles.buttonText}> Track Inventory</Text>
+          </Pressable>
         </View>
       </ScrollView>
     </ImageBackground>
@@ -89,15 +74,19 @@ const styles = StyleSheet.create({
   },
   container: {
     flexGrow: 1,
+    justifyContent: 'center',
     padding: 20,
-    justifyContent: 'flex-start',
     alignItems: 'center',
   },
-  overlay: {
-    backgroundColor: 'rgba(255,255,255,0.88)',
-    padding: 20,
+  card: {
+    backgroundColor: 'rgba(255, 255, 255, 0.93)',
+    padding: 24,
     borderRadius: 16,
     maxWidth: 800,
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 5,
   },
   title: {
     fontSize: 36,
@@ -133,17 +122,23 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   button: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#2196F3',
     paddingVertical: 14,
-    paddingHorizontal: 30,
+    paddingHorizontal: 25,
     borderRadius: 10,
     marginTop: 16,
-    alignItems: 'center',
+    alignSelf: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+    marginLeft: 8,
   },
 });
-
