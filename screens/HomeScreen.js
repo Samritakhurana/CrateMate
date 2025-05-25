@@ -42,25 +42,17 @@ export default function HomeScreen({ navigation }) {
             • Gives daily storage tips based on weather (e.g. move crates to shade).
           </Text>
           <Text style={styles.bullet}>
-            • Tracks inventory — harvests, sales, losses, and spoilage trends.
-          </Text>
-          <Text style={styles.bullet}>
-            • Works offline and syncs data once internet is available.
+            • Tracks inventories like harvests, sales, losses, and spoilage trends.
           </Text>
           <Text style={styles.bullet}>
             • Supports local languages with a simple, friendly design.
           </Text>
-
-          <Text style={styles.paragraph}>
-            CrateMate is built with real farmers in mind—practical, reliable, and easy to use. It brings together good science, smart design, and a deep respect for the people who feed us.
-          </Text>
-
           <Text style={styles.paragraph}>
             Plus, it comes with our custom bamboo crates—sturdy, breathable, and biodegradable, with antimicrobial cushions to slow ripening naturally.
           </Text>
 
           <Text style={styles.paragraph}>
-            CrateMate isn’t just an app—it’s a step toward fewer spoiled papayas, stronger harvests, and more support for the hands that grow our food.
+            CrateMate helps farmers save fruit, cut waste, and grow with confidence.
           </Text>
 
           <TouchableOpacity
