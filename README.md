@@ -180,16 +180,10 @@ To contribute:
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## Support
 
 For questions, issues, or feedback:
-- Email: support@cratemate.app
+- Email: Khurana.samrita@gmail.com or Sahaj8sandeep.k@gmail.com
 - Open an issue in this repository
 - Refer to the documentation for additional help
 
