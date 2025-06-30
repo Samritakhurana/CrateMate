@@ -1077,7 +1077,7 @@ const LandingPage = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="https://youtu.be/iflsaTUzBao" target="_blank" rel="noopener noreferrer" className="hover:text-white">Watch Demo</a></li>
+                <li><a href="https://youtu.be/40JY8hOzYJk" target="_blank" rel="noopener noreferrer" className="hover:text-white">Watch Demo</a></li>
                 <li><Link to="/language-support" state={{ returnTo: '/' }} className="hover:text-white">Language Support</Link></li>
                 <li><Link to="/offline-mode" state={{ returnTo: '/' }} className="hover:text-white">Connectivity & Sync</Link></li>
                 <li><button onClick={() => smoothScrollTo('team')} className="hover:text-white">Contact Team</button></li>
