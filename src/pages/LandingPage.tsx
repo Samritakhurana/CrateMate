@@ -440,7 +440,7 @@ const LandingPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://youtu.be/iflsaTUzBao"
+              href="https://youtu.be/40JY8hOzYJk"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
@@ -944,7 +944,7 @@ const LandingPage = () => {
                 See how real farmers are benefiting from our bamboo crate solution
               </p>
               <a
-                href="https://youtu.be/iflsaTUzBao"
+                href="https://youtu.be/iflsaTUzBao"  
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors"
