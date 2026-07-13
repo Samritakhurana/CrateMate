@@ -131,7 +131,7 @@ CrateMate supports the following Indian languages:
 - Telugu (తెలుగు)  
 - Kannada (ಕನ್ನಡ)  
 - Bengali (বাংলা)  
-
+ 
 ---
 
 ## Real-time & Offline Capabilities
