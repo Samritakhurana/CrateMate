@@ -1091,9 +1091,9 @@ const LandingPage = () => {
         </div>
       </footer>
 
-      {/* Bolt.new Badge */}
-      <div className="fixed bottom-4 right-4 z-50">
-        <a
+      {/* Bolt.new Badge
+      <div className="fixed bottom-4 right-4 z-50"> */}
+        {/* <a
           href="https://bolt.new"
           target="_blank"
           rel="noopener noreferrer"
@@ -1104,8 +1104,8 @@ const LandingPage = () => {
             alt="Made with Bolt.new"
             className="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-lg hover:shadow-xl transition-shadow"
           />
-        </a>
-      </div>
+        </a> */}
+      {/* </div> */}
     </div>
   );
 };
