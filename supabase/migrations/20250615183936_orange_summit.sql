@@ -7,7 +7,7 @@
     - `farm_profiles` - Store farm and user profile information
     - `analytics` - Store daily analytics data
     - `market_prices` - Store current market price information
-
+ 
   2. Security
     - Enable RLS on all tables
     - Add policies for authenticated users to manage their own data
