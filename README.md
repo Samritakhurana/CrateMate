@@ -1,10 +1,6 @@
 # CrateMate – Smart Fruit Management System
 
 **CrateMate** is a full-featured web application designed to help farmers and fruit vendors minimize spoilage, enhance storage practices, and improve profitability through intelligent, data-driven fruit management.
-
-Turning Spoilage into Strength,
-A smart app to reduce fruit spoilage and boost profits for small farmers
-
 ---
 
 ## Features
